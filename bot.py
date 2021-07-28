@@ -1,12 +1,13 @@
 #bot.py
 import logging, time, random
+import os
 
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.dispatcher.filters import Text
 
 logging.basicConfig(level=logging.INFO)
 
-bot = Bot(token="1940303458:AAGKZNxaSqvBdR9s6sS6qBfXYt5C0zZJEzc")
+bot = Bot(token=os.environ["token"])
 dp = Dispatcher(bot)
 
 
